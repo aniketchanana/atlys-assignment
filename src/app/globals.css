@@ -30,4 +30,10 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .border-gradient {
+    box-shadow: 0 0 4px rgba(150, 150, 150, 0.5), 0 0 8px rgba(52, 52, 52, 0.5),
+      inset 0 0 4px rgba(150, 150, 150, 0.5),
+      inset 0 0 8px rgba(52, 52, 52, 0.5);
+  }
 }

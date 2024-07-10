@@ -17,7 +17,7 @@ const LoginForm: React.FC = () => {
   };
 
   return (
-    <div className='bg-[#27292D] p-8 rounded-lg shadow-lg w-full flex flex-col gap-4'>
+    <div className='bg-[#27292D] p-8 w-full flex flex-col gap-4 border-gradient rounded-lg'>
       <Typography variant='heading' className='font-bold !text-white'>
         Log into your account
       </Typography>
