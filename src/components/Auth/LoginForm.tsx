@@ -1,23 +1,26 @@
 'use client';
 
 import Anchor from '@/components/ui/Anchor';
+import BaseWrapper from '@/components/ui/BaseWrapper';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import Typography from '@/components/ui/Typography';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 
 const LoginForm: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const router = useRouter();
 
   const handleLogin = () => {
-    // Handle login logic here
     console.log('Email:', email);
     console.log('Password:', password);
+    router.push('/home');
   };
 
   return (
-    <div className='bg-[#27292D] p-8 w-full flex flex-col gap-4 rounded-lg'>
+    <BaseWrapper>
       <Typography variant='heading' className='font-bold !text-white'>
         Log into your account
       </Typography>
@@ -52,7 +55,7 @@ const LoginForm: React.FC = () => {
           Register
         </Anchor>
       </div>
-    </div>
+    </BaseWrapper>
   );
 };
 
