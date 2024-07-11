@@ -52,7 +52,7 @@ const Textarea: React.FC<TextareaProps> = ({
           {...(value ? { value } : {})}
           {...(onChange ? { onChange } : {})}
           {...(placeholder ? { placeholder } : {})}
-          className={`w-full h-20 px-4 py-2 border-[#35373B] border-[1px] rounded focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent bg-transparent resize-none ${
+          className={`w-full h-20 px-4 py-2 text-gray-300 border-[#1f2937] border-[1px] rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent bg-[#191920] resize-none ${
             leftIcon ? 'pl-20' : ''
           }`}
         />

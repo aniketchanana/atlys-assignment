@@ -12,8 +12,8 @@ const CreatePost: React.FC = () => {
   };
 
   return (
-    <div className='bg-gray-800 p-4 rounded-lg shadow-lg w-full flex flex-col'>
-      <Typography variant='subheading' className='mb-3'>
+    <div className='bg-[#1f2937] p-4 rounded-lg shadow-lg w-full flex flex-col'>
+      <Typography variant='subheading' className='mb-3 text-gray-300'>
         Create post
       </Typography>
       <TextArea
@@ -22,7 +22,7 @@ const CreatePost: React.FC = () => {
         className='mb-4'
         leftIcon={<span>💬</span>}
       />
-      <Button onClick={handlePost} className='w-fit p-4 self-end'>
+      <Button onClick={handlePost} className='!w-fit p-4 self-end'>
         Post
       </Button>
     </div>

@@ -1,41 +1,39 @@
 'use client';
-
 import Anchor from '@/components/ui/Anchor';
 import BaseWrapper from '@/components/ui/BaseWrapper';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import Typography from '@/components/ui/Typography';
-import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-type LoginFormProps = {
-  className?: string;
-  onRegisterClick?: () => void;
+type RegisterFormProps = {
+  onLoginClick?: () => void;
 };
-const LoginForm = ({ className = '', onRegisterClick }: LoginFormProps) => {
-  const [showLoginDialog, setShowLoginDialog] = useState(false);
+function RegisterForm({ onLoginClick }: RegisterFormProps) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const router = useRouter();
-
-  const handleLogin = () => {
-    console.log('Email:', email);
-    console.log('Password:', password);
-    router.push('/home');
+  const handleRegister = () => {
+    console.log({ email, password });
   };
-
   return (
-    <BaseWrapper className={className}>
+    <BaseWrapper>
       <Input
-        label='Email or Username'
+        label='Email'
         type='text'
         placeholder='Enter your email or username'
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <Input
+        label='Username'
+        type='text'
+        placeholder='Chose your preferred username'
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <Input
         label='Password'
         type='password'
-        placeholder='Enter your password'
+        placeholder='Choose a strong password'
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         rightTop={
@@ -44,21 +42,21 @@ const LoginForm = ({ className = '', onRegisterClick }: LoginFormProps) => {
           </Anchor>
         }
       />
-      <Button onClick={handleLogin}>Login now</Button>
+      <Button onClick={handleRegister}>Continue</Button>
       <div>
         <Anchor
-          onClick={onRegisterClick}
+          onClick={onLoginClick}
           href='#'
           leftContent={
-            <Typography variant='caption'>Not registered yet?</Typography>
+            <Typography variant='caption'>Already have an account?</Typography>
           }
           rightContent={<i className='ri-arrow-right-line text-inherit' />}
         >
-          Register
+          Login
         </Anchor>
       </div>
     </BaseWrapper>
   );
-};
+}
 
-export default LoginForm;
+export default RegisterForm;

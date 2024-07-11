@@ -7,6 +7,7 @@ interface CustomLinkProps {
   rightContent?: React.ReactNode;
   leftContent?: React.ReactNode;
   className?: string;
+  onClick?: () => void;
 }
 
 const Anchor: React.FC<CustomLinkProps> = ({
@@ -15,9 +16,10 @@ const Anchor: React.FC<CustomLinkProps> = ({
   rightContent = null,
   leftContent = null,
   className,
+  onClick,
 }) => {
   return (
-    <Link href={href}>
+    <Link href={href} {...(onClick ? { onClick } : {})}>
       <span
         className={`text-blue-400 hover:text-blue-200 transition-all duration-300 flex items-center space-x-1 ${className}`}
       >
