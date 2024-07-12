@@ -2,7 +2,7 @@ import CreatePost from '@/components/Home/CreatePost';
 import UserPostList from '@/components/Home/UserPostList';
 import Typography from '@/components/ui/Typography';
 
-function Home() {
+export default function Home() {
   return (
     <div className='w-full'>
       <div className='mb-10'>
@@ -19,5 +19,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-interface CustomLinkProps {
+interface AnchorProps {
   href: string;
   children: React.ReactNode;
   rightContent?: React.ReactNode;
@@ -10,7 +10,7 @@ interface CustomLinkProps {
   onClick?: () => void;
 }
 
-const Anchor: React.FC<CustomLinkProps> = ({
+const Anchor: React.FC<AnchorProps> = ({
   href,
   children,
   rightContent = null,

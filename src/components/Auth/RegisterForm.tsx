@@ -4,12 +4,13 @@ import BaseWrapper from '@/components/ui/BaseWrapper';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import Typography from '@/components/ui/Typography';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 type RegisterFormProps = {
   onLoginClick?: () => void;
 };
-function RegisterForm({ onLoginClick }: RegisterFormProps) {
+const RegisterForm: FC<RegisterFormProps> = ({ onLoginClick }) => {
   const [email, setEmail] = useState('');
+  const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const handleRegister = () => {
     console.log({ email, password });
@@ -27,8 +28,8 @@ function RegisterForm({ onLoginClick }: RegisterFormProps) {
         label='Username'
         type='text'
         placeholder='Chose your preferred username'
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        value={userName}
+        onChange={(e) => setUserName(e.target.value)}
       />
       <Input
         label='Password'
@@ -57,6 +58,6 @@ function RegisterForm({ onLoginClick }: RegisterFormProps) {
       </div>
     </BaseWrapper>
   );
-}
+};
 
 export default RegisterForm;

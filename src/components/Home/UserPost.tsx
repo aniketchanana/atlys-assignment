@@ -12,7 +12,11 @@ type UserPostProps = {
   timeStamp: string;
   isEdited?: boolean;
 };
-function UserPost({ userName, timeStamp, isEdited = false }: UserPostProps) {
+const UserPost: React.FC<UserPostProps> = ({
+  userName,
+  timeStamp,
+  isEdited = false,
+}) => {
   const [postContent, setPostContent] = useState('');
   const [showRegisterDialog, setShowRegisterDialog] = useState(false);
   const [showLoginForm, setShowLoginForm] = useState(false);
@@ -70,6 +74,12 @@ function UserPost({ userName, timeStamp, isEdited = false }: UserPostProps) {
         editable={false}
         value='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.'
       />
+      <div className='flex gap-1 items-center'>
+        <Typography variant='body'>
+          <i className='ri-chat-4-line mr-1'></i>
+        </Typography>
+        <Typography variant='caption'>24 comments</Typography>
+      </div>
       <Dialog
         open={showRegisterDialog}
         onClose={() => setShowRegisterDialog(false)}
@@ -88,6 +98,6 @@ function UserPost({ userName, timeStamp, isEdited = false }: UserPostProps) {
       </Dialog>
     </div>
   );
-}
+};
 
 export default UserPost;

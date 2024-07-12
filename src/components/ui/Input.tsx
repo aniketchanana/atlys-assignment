@@ -51,9 +51,9 @@ const Input: React.FC<InputProps> = ({
           {...(value ? { value } : {})}
           {...(onChange ? { onChange } : {})}
           {...(placeholder ? { placeholder } : {})}
-          className={`w-full px-4 py-2 border-[#1f2937] border-[1px] rounded focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent bg-transparent ${
+          className={`w-full px-4 py-2 border-[#1f2937] border-[1px] rounded focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent bg-[#191920] ${
             leftIcon ? 'pl-10' : ''
-          }`}
+          } duration-300 ease-in-out`}
         />
         {type === 'password' && (
           <div

@@ -6,13 +6,12 @@ import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import Typography from '@/components/ui/Typography';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 type LoginFormProps = {
   className?: string;
   onRegisterClick?: () => void;
 };
-const LoginForm = ({ className = '', onRegisterClick }: LoginFormProps) => {
-  const [showLoginDialog, setShowLoginDialog] = useState(false);
+const LoginForm: FC<LoginFormProps> = ({ className = '', onRegisterClick }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
