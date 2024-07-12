@@ -5,7 +5,7 @@ export default function HomeLayout({
 }>) {
   return (
     <div className='flex justify-center h-full'>
-      <div className='w-[712px] p-16'>{children}</div>
+      <div className='w-[712px] p-4 sm:p-16'>{children}</div>
     </div>
   );
 }

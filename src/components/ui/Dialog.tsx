@@ -10,25 +10,7 @@ interface DialogProps {
   subTitle?: string;
   children: React.ReactNode;
   fullWidth?: boolean;
-  maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 }
-
-const getMaxWidthClass = (maxWidth?: string) => {
-  switch (maxWidth) {
-    case 'xs':
-      return 'max-w-xs';
-    case 'sm':
-      return 'max-w-sm';
-    case 'md':
-      return 'max-w-md';
-    case 'lg':
-      return 'max-w-lg';
-    case 'xl':
-      return 'max-w-xl';
-    default:
-      return 'max-w-md';
-  }
-};
 
 const Dialog: React.FC<DialogProps> = ({
   open,
@@ -37,7 +19,6 @@ const Dialog: React.FC<DialogProps> = ({
   subTitle,
   children,
   fullWidth = false,
-  maxWidth = 'md',
 }) => {
   const [isVisible, setIsVisible] = useState(open);
 
@@ -67,9 +48,7 @@ const Dialog: React.FC<DialogProps> = ({
         <div
           className={`bg-[#1f2937] p-6 rounded-lg shadow-lg w-full ${
             fullWidth ? 'w-full' : ''
-          } ${getMaxWidthClass(maxWidth)} relative ${
-            open ? 'dialog-enter' : 'dialog-exit'
-          }`}
+          } max-w-md relative ${open ? 'dialog-enter' : 'dialog-exit'}`}
         >
           <div
             onClick={onClose}
