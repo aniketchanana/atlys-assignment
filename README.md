@@ -1,4 +1,4 @@
-# Documentation
+# Documentation & Notes
 
 ### Note for evaluator
 
@@ -13,13 +13,22 @@ https://www.figma.com/design/S4bZXDniOieMhyGIpTnVu5/Frontend-Developer%3A-Atlys?
 
 ### Live demo
 
-https://atlys-assignment-five.vercel.app/home
+https://atlys-assignment-five.vercel.app
 
 ### Loom demo
 
 https://www.loom.com/share/20e8cddc8c8e43cba106667be08465fa?sid=e2b38364-e43f-477d-a5ba-497ff0f6ad20
 
-# Frontend Web Application Documentation
+## Tech Stack
+
+- Next.js
+- TypeScript
+
+## Local setup
+
+- git clone repo
+- npm install
+- npm run dev (to start development server)
 
 ## UI Components
 
